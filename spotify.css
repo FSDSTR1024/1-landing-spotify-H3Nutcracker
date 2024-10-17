@@ -1,0 +1,77 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 75px;
+}
+
+#spotify-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+header h2 {
+    margin-left: 2px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+h2 sup {
+    font-size: 0.3em;
+    vertical-align: super;
+}
+
+nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+hr {
+    height: 20px;
+    margin: 10px;
+}
+
+a:hover {
+    color: #1ed760;
+}
+
+body {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+/*article.premium {
+        --gradient-color: #FFD2D7;
+            --background-image-url-small: url(https://i.scdn.co/image/ab671c3d0000f4304024a1823630b85923e6668c);
+            --background-image-url: var(--background-image-url-small);
+            width: auto;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            flex-direction: column;
+            background-size: 100%;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-image: var(--background-image-url);
+            background-color: var(--background-color);
+            position: relative;
+}*/
