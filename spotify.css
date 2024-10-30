@@ -332,6 +332,10 @@ a.learnMore {
     font-size: 12px;
 }
 
+a.learnMore:hover {
+    font-weight: bold;
+}
+
 h3.plansH3 {
     font-size: 35px;
     font-weight: bold;
