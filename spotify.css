@@ -99,7 +99,7 @@ article.premium button  {
     margin-bottom: 20px;
     margin-right: 15px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 40px;
     font-size: 15px;
     font-weight: bold;
 }
@@ -112,12 +112,16 @@ article.premium button:hover {
 button.freeTrial {
     background-color: #ffd2d7;
     border: none;
+    width: 280px;
+    height: 50px;
 }
 
 button.viewPlans {
     background-color: black;
     color: white;
     border: 1px solid white;
+    width: 210px;
+    height: 50px;
 }
 
 p.conditions {
@@ -171,8 +175,9 @@ th.column2 {
 td.column1 {
     text-align: left;
     text-decoration-line: underline;
-    text-decoration-style: dotted;
-    text-underline-offset: 2px;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
     font-weight: normal;
 }
 
@@ -267,6 +272,8 @@ img#selectorLogo {
 div.planSelector {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 65%;
+    margin: 90px 0 0 20%;
     justify-items: center;
     justify-content: center;
     column-gap: 50px;
@@ -277,10 +284,15 @@ div.planSelector {
 div.planBox {
     background-color: #2a2a2a;
     border-radius: 10px;
-    width: 400px;
-    height: 450px;
+    width: 350px;
+    height: 480px;
     padding: 0 20px 20px 0;
     text-align: left;
+}
+
+div#familyBox {
+    grid-column: 2/3;
+    height: 380px;
 }
 
 p.planHeader {
@@ -352,7 +364,6 @@ p#individualPrice {
     font-size: 12px;
     margin-left: 10px;
     color: #a7a7a7;
-    border-bottom: 1px solid #a7a7a71c;
     padding-top: 10px;
     padding-bottom: 15px;
 }
@@ -361,51 +372,277 @@ p#studentPrice {
     font-size: 12px;
     margin-left: 10px;
     color: #a7a7a7;
-    border-bottom: 1px solid #a7a7a71c;
     padding-top: 10px;
     padding-bottom: 15px;
+}
+
+hr.selectorHr {
+    height: 0.1px;
+    width: 95%;
+    border: 1px solid #ffffff1a;
+    background-color: #ffffff1a;
+}
+
+hr#duoHr {
+    margin-top: 45px;
 }
 
 ul.featuresList {
     padding: 20px 0 20px 30px;
 }
 
-div.planBox > button {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    margin-left: 50px;
+button.selectorButton {
+    margin: 25px 60px 20px 50px;
     width: 80%;
     padding: 10px;
     border-radius: 20px;
     font-size: 15px;
     font-weight: bold;
+    border: none;
 }
 
-div.planBox > button:hover {
+button.selectorButton:hover {
     cursor: pointer;
     scale: 1.05;
 }
 
-button.selectIndividual {
+button#individualButton {
     background-color: #ffd2d7;
     color: black;
-    border: none;
+    margin-top: 65px;
 }
 
-button.selectStudent {
+button#studentButton {
     background-color: #c4b1d4;
     color: black;
-    border: none;
+    margin-top: 30px;
 }
 
-button.selectDuo {
+button#duoButton {
     background-color: #ffc862;
     color: black;
-    border: none;
+    margin-top: 105px;
 }
 
-button.selectFamily {
-    background-color: #a5bbd1;  
+button#familyButton {
+    background-color: #a5bbd1;
     color: black;
-    border: none;
+}
+
+article.questions {
+    margin-left: auto;
+    padding-bottom: 70px;
+}
+
+h2#questionsHeader {
+    font-size: 35px;
+    text-align: center;
+    margin-left: 70px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+p#questionsP {
+    font-size: 15px;
+    text-align: center;
+    margin: 0 0 30px 70px;
+}
+
+a.support {
+    color: white;
+}
+
+details {
+    margin: auto;
+    width: 65%;
+    font-size: 20px;
+    border-bottom: 1px solid #ffffff1a;
+    padding: 15px 0 10px 0;
+}
+
+details:last-child {
+    border-bottom: none;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* No conseguí que las flechas sean iguales. No me queda muy claro el uso de los <svg>*/
+.arrow {
+    width: 30px;
+    height: 20px;
+    fill: currentColor;
+}
+
+details[open] .arrow {
+    transform: rotate(180deg);
+    margin-right: 8px;
+}
+
+p.answer {
+    font-size: 15px;
+    padding: 15px 30px 30px;
+    background-color: #2a2a2a;
+    line-height: 1.5;
+}
+
+details:hover {
+    background-color: #ffffff1a;
+}
+
+summary:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+details[open] {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+details[open] summary {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    background-color: #ffffff1a;
+}
+
+footer {
+    background-color: black;
+    padding: 80px 0;
+}
+
+footer a:hover {
+    color: #1ed760;
+}
+
+nav#footerNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.footerLogo {
+    display: flex;
+    margin-left: 300px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 0 15px
+}
+
+img#spotifyLogoFooter {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 250px;
+}
+
+h2#footerH2 {
+    margin-bottom: 250px; ;
+}
+
+ul.footerList {
+    list-style-type: none;
+    padding: 0 15px;
+    flex: 1;
+    min-width: 150px;
+}
+
+h2.footerListTitle {
+    color: #a7a7a7;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+li.footerListItem {
+    padding: 3px 0 15px;
+}
+
+div.socialMedia {
+    margin-right: 180px;
+}
+
+ul.socialMediaList {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+li.socialMediaList {
+    height: 60px;
+    width: 60px;
+    background-color: #2a2a2a;
+    margin-right: 15px;
+    align-items: center;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.socialLogo {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+div.region {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #a7a7a7;
+    margin: 30px 400px 0 1330px;
+    margin-top: 30px;
+    margin-right: 400px;
+}
+
+a.regionLink {
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+div.legals {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #a7a7a7;
+    margin-top: 30px;
+}
+
+ul#legalsList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+a.legalsListItem {
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+span.copyright {
+    margin-left: 150px;
 }
